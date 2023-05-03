@@ -1,6 +1,6 @@
 sudo apt update -y
 #install zsh and wget
-sudo apt install zsh wget -y
+sudo apt install zsh wget curl -y
 #install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #get the fonts
@@ -19,7 +19,7 @@ sed -i 's/^export ZSH_THEME=.*/export ZSH_THEME="agonster-edited"/' ~/.zshrc
 
 #Create the dircolors file
 dircolors -p > ~/.dircolors
-#Change the green background to transparent ffs
+#Change the green background to transparent
 sed -i 'tw/;42/;01/' ~/.dircolors #STICKY_OTHER_WRITABLE 30;01 # dir that is sticky and other-writable (+t,o+w)
 sed -i 'ow/;42/;01/' ~/.dircolors#OTHER_WRITABLE 34;01 # dir that is other-writable (o+w) and not sticky
 sed -i 'st/;42/;01/' ~/.dircolors#STICKY 37;01 # dir with the sticky bit set (+t) and not other-writable
@@ -33,7 +33,7 @@ rm JetBrainsMono.zip
 
 #In your terminal application set the theme to SOLARIZED DARK
 
-#If shit goes south refert to these URLS:
+#If things go south refer to these URLS:
 #http://www.bigsoft.co.uk/blog/2008/04/11/configuring-ls_colors
 #https://stackoverflow.com/questions/40574819/how-to-remove-dir-background-in-ls-color-output
 #https://ohmyz.sh/
