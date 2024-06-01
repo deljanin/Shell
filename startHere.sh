@@ -26,7 +26,8 @@ sed -i 's/^DIR.*/DIR 34;01/' ~/.dircolors #Text green
 #sed -i 'ow/;42/;01/' ~/.dircolors#OTHER_WRITABLE 34;01 # dir that is other-writable (o+w) and not sticky
 #sed -i 'st/;42/;01/' ~/.dircolors#STICKY 37;01 # dir with the sticky bit set (+t) and not other-writable
 #      'tw/OLD_STRING/NEW_STRING/'
-
+#Adding dircolors to .zshrc
+echo 'eval "$(dircolors ~/.dircolors)"' >> ~/.zshrc
 #reload everything
 source ~/.zshrc
 
