@@ -19,10 +19,12 @@ sed -i 's/^export ZSH_THEME=.*/export ZSH_THEME="agonster-edited"/' ~/.zshrc
 
 #Create the dircolors file
 dircolors -p > ~/.dircolors
-#Change the green background to transparent
-sed -i 'tw/;42/;01/' ~/.dircolors #STICKY_OTHER_WRITABLE 30;01 # dir that is sticky and other-writable (+t,o+w)
-sed -i 'ow/;42/;01/' ~/.dircolors#OTHER_WRITABLE 34;01 # dir that is other-writable (o+w) and not sticky
-sed -i 'st/;42/;01/' ~/.dircolors#STICKY 37;01 # dir with the sticky bit set (+t) and not other-writable
+#Change the green background to transparent\
+sed -i 's/^DIR.*/DIR 37;01/' ~/.dircolors #Text white
+sed -i 's/^DIR.*/DIR 34;01/' ~/.dircolors #Text green
+#sed -i 'tw/;42/;01/' ~/.dircolors #STICKY_OTHER_WRITABLE 30;01 # dir that is sticky and other-writable (+t,o+w)
+#sed -i 'ow/;42/;01/' ~/.dircolors#OTHER_WRITABLE 34;01 # dir that is other-writable (o+w) and not sticky
+#sed -i 'st/;42/;01/' ~/.dircolors#STICKY 37;01 # dir with the sticky bit set (+t) and not other-writable
 #      'tw/OLD_STRING/NEW_STRING/'
 
 #reload everything
